@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo-new-icon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/croppie.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Cắt file Logo</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 col-md-7 col-sm-8 col-xs-111 px-0 header">
+                <div class="left-logo">
+                    <img src="images/logo-new.webp" alt="">
+                </div>
+                <div class="comp">
+                    <p id="comp__name">Công ty cổ phần hóa đơn điện tử New-invoice</p>
+                    <p id="comp__taxcode">Mã số thuế: 0105937449</p>
+                    <p id="comp__address">Địa chỉ: Phòng 201-203 Tầng 2A, Tòa nhà N04-B1, Đướng Thành Thái, Dịch Vọng, Cầu Giấy, Hà Nội</p>
+                    <p id="comp__tel">Hotline: 1900 633 651</p>
+                    <p id="comp__mail">Email: nghiepvu@newinvoice.vn - Website: newinvoice.com.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container px-0 mx-0">
+        <div class="row ratio-rad">
+            <div class="col-lg-4 col-md-6 col-sm-8  col-xs-11 ratio">
+                <p id="ratio__title"><i class="fas fa-flag"></i> Lựa chọn tỷ lệ:</p>
+                <div class="ratio-select">
+                    <div class="rectange">
+                        <input type="radio" name="ratio" value="0" id="rectange" class="ratio-val" checked>
+                        <label for="rectange" class="title-rad">Tỷ lệ 2 x 1</label>
+                    </div>
+                    <div class="square">
+                        <input type="radio" name="ratio" value="1" id="square" class="ratio-val">
+                        <label for="square" class="title-rad">Tỷ lệ 1 x 1</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-8 col-xs-11">
+                <div class="picture">
+                    <img class="logo" id="logo" src="">
+                </div>
+                <div class="file-drop-area">
+                    <span class="btn fake-btn" id="select-l-logo" data-modal="cropImagePop"> Chọn Logo...</span>
+                    <span class="file-msg display-fname" id="msg-left-logo">Kéo thả file ảnh vào đây</span>
+                    <input type="file" id="file-l-logo" class="item-img file center-block file-input" name="file_photo" />
+                </div>
+                <button class="download">
+                <a href="" class="download-img" download="logo.png">Tải ảnh về</a>
+            </button>
+                <div class="note">
+                    <p class="size"><i class="fas fa-flag"></i> Kích thước của ảnh là: 500 x 250.</p>
+                    <p class="offer"><i class="fas fa-flag"></i> Quý khách tạo mẫu hóa đơn vui lòng chọn Template_Mxx_HCN để logo đạt đúng tỷ lệ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content modal-content2">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">
+                        Chỉnh sửa file Logo
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body modal-body2">
+                    <div id="upload-demo" class="center-block"></div>
+                </div>
+                <div class="modal-footer modal-footer2">
+                    <!-- <p id="footer-title"><i class="fas fa-flag"></i> Kích thước tối đa của logo: 200 x 100px</p> -->
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button> -->
+                    <button type="button" id="cropImageBtn" class="btn btn-primary">Cắt ảnh này</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/croppie.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
