@@ -1,6 +1,7 @@
 body {
     font-size: 62.5%;
-    background-color: rgba(0, 174, 239, 0.1);
+    background-color: white;
+    margin: 5rem auto;
 }
 
 .container-fluid {
@@ -177,7 +178,7 @@ input[type='radio']:checked:after {
     align-items: center;
     max-width: 100%;
     padding: 1.5rem 0px;
-    background-color: rgba(0, 174, 239, 0.001);
+    background-color: white;
     border-radius: 3px;
     transition: 0.2s;
 }

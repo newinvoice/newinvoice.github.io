@@ -40,17 +40,17 @@ $('.ratio-val').on('change', function() {
         $('#upload-demo').croppie('destroy');
         $uploadCrop = $('#upload-demo').croppie({
             viewport: {
-                width: 50 + 'rem',
-                height: 25 + 'rem',
+                width: 500,
+                height: 250
             },
             boundary: {
-                width: 100 + '%',
+                width: 510,
                 height: 260
             },
             enforceBoundary: false,
             enableExif: true
         });
-    } else if ($('input[name=ratio]:checked').val() == 1) {
+    } else {
         $('.logo').css({
             'width': '25rem',
             'height': '25rem'
@@ -60,11 +60,11 @@ $('.ratio-val').on('change', function() {
         $('#upload-demo').croppie('destroy');
         $uploadCrop = $('#upload-demo').croppie({
             viewport: {
-                width: 25 + 'rem',
-                height: 25 + 'rem',
+                width: 250,
+                height: 250,
             },
             boundary: {
-                width: 100 + '%',
+                width: 510,
                 height: 260
             },
             enforceBoundary: false,
