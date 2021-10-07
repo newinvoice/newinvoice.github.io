@@ -5,14 +5,20 @@ var $uploadCrop,
 
 
 function readFile(input) {
+    var file_ext_name = '';
     if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            $('#cropImagePop').modal('show');
-            rawImg = e.target.result;
+        file_ext_name = input.files[0].name.substring(input.files[0].name.lastIndexOf('.') + 1, input.files[0].name.length);
+        if (file_ext_name == 'jpg' || file_ext_name == 'png' || file_ext_name == 'jpeg') {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#cropImagePop').modal('show');
+                rawImg = e.target.result;
+            }
+            console.log(input.files[0]);
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            alert("Tên file bắt buộc .png, .jpg và .jpeg");
         }
-        console.log(input.files[0]);
-        reader.readAsDataURL(input.files[0]);
     } else {
         console.log("Sorry - you're browser doesn't support the FileReader API");
     }
@@ -36,7 +42,7 @@ $('.ratio-val').on('change', function() {
             'height': '25rem'
         });
         $('.size').html('<i class="fas fa-flag"></i> Kích thước của ảnh là: 500 x 250.');
-        $('.offer').html('<i class="fas fa-flag"></i> Quý khách tạo mẫu hóa đơn vui lòng chọn Template_Mxx_HCN để logo đạt đúng tỷ lệ.');
+        $('.offer').html('<i class="fas fa-flag"></i> Quý khách tạo mẫu hóa đơn vui lòng chọn Template_N**_HCN hoặc Template_N**_HCN_LGC để logo đạt đúng tỷ lệ.');
         $('#upload-demo').croppie('destroy');
         $uploadCrop = $('#upload-demo').croppie({
             viewport: {
@@ -56,7 +62,7 @@ $('.ratio-val').on('change', function() {
             'height': '25rem'
         });
         $('.size').html('<i class="fas fa-flag"></i> Kích thước của ảnh là: 250 x 250.');
-        $('.offer').html('<i class="fas fa-flag"></i> Quý khách tạo mẫu hóa đơn vui lòng chọn Template_Mxx_HV để logo đạt đúng tỷ lệ.');
+        $('.offer').html('<i class="fas fa-flag"></i> Quý khách tạo mẫu hóa đơn vui lòng chọn Template_N**_HV hoặc Template_N**_HV_LGC để logo đạt đúng tỷ lệ.');
         $('#upload-demo').croppie('destroy');
         $uploadCrop = $('#upload-demo').croppie({
             viewport: {
