@@ -107,6 +107,7 @@ $('#cropImageBtn').on('click', function(ev) {
         $('.download-img').attr('href', resp);
         $('#cropImagePop').modal('hide');
         $("#file-l-logo").val("");
+        $(':radio:not(:checked)').attr('disabled', true);
     });
 });
 
